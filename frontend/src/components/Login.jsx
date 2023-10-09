@@ -12,7 +12,6 @@ const Login = () => {
         e.preventDefault();
         try {
             await axios.post("http://localhost:3000/login", { email, password });
-
             navigate("/dashboard");
         } catch (error) {
             if (error.response) {
